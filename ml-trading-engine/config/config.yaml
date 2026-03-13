@@ -1,0 +1,26 @@
+trading:
+  symbol: "USDRUB"
+  timeframe: "1m"
+  risk_per_trade: 0.01  # 1% risk per trade
+  max_drawdown: 0.05  # 5% max drawdown
+  max_exposure: 100000  # Max exposure in USD
+
+data:
+  historical_data_path: "data/historical/"
+  feature_store_path: "data/features/"
+  model_registry_path: "models/registry/"
+
+ml:
+  prediction_horizon: 5  # Predict N candles ahead
+  train_window: 1000  # Training window size
+  validation_split: 0.2
+  random_state: 42
+
+execution:
+  slippage: 0.0001  # 0.01% slippage
+  commission: 0.0002  # 0.02% commission per trade
+
+backtest:
+  start_date: "2023-01-01"
+  end_date: "2023-02-01"
+  initial_capital: 100000
